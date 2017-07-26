@@ -25,12 +25,13 @@ public class ServiceLocator
         return hasHttps ? "https://" + homePageUrl : "http://" + homePageUrl;
     }
 
-    private String getUrlWithoutPort(String homePageUrl)
+    private String getUrlWithoutPort(String originalUrl)
     {
-        if (homePageUrl.contains(":"))
+        if (originalUrl.contains(":"))
         {
-            return homePageUrl.substring(0, homePageUrl.indexOf(":"));
+            String newUrl = originalUrl.substring(0, originalUrl.indexOf(":"));
+            return newUrl.equals("localhost") ? originalUrl : newUrl;
         }
-        return homePageUrl;
+        return originalUrl;
     }
 }
