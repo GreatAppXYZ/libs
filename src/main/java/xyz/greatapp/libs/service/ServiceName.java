@@ -1,4 +1,4 @@
-package xyz.my_app.libs.service;
+package xyz.greatapp.libs.service;
 
 public enum ServiceName
 {

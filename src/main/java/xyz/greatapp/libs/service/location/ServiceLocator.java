@@ -1,11 +1,11 @@
-package xyz.my_app.libs.service.location;
+package xyz.greatapp.libs.service.location;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.my_app.libs.service.ServiceName;
-import xyz.my_app.libs.service.Environment;
+import xyz.greatapp.libs.service.Environment;
+import xyz.greatapp.libs.service.ServiceName;
 
 @Component
 public class ServiceLocator

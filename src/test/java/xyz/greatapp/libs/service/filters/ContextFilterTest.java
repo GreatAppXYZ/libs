@@ -1,14 +1,8 @@
-package xyz.my_app.libs.service.filters;
+package xyz.greatapp.libs.service.filters;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
-import static xyz.my_app.libs.service.Environment.DEV;
-import static xyz.my_app.libs.service.Environment.PROD;
-import static xyz.my_app.libs.service.Environment.AUTOMATION_TEST;
-import static xyz.my_app.libs.service.Environment.UAT;
 
 import java.io.IOException;
 import javax.servlet.FilterChain;
@@ -21,7 +15,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import xyz.my_app.libs.service.context.ThreadContextService;
+import xyz.greatapp.libs.service.Environment;
+import xyz.greatapp.libs.service.context.ThreadContextService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ContextFilterTest
@@ -57,26 +52,26 @@ public class ContextFilterTest
     public void shouldInitializeProdEnvironmentContext() throws IOException, ServletException
     {
         // given
-        given(httpServletRequest.getServerName()).willReturn("prod.my-app.xyz");
+        given(httpServletRequest.getServerName()).willReturn("prod.greatapp.xyz");
 
         // when
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
 
         // then
-        verify(threadContextService).initializeContext(PROD);
+        verify(threadContextService).initializeContext(Environment.PROD);
     }
 
     @Test
     public void shouldInitializeUATEnvironmentContext() throws IOException, ServletException
     {
         // given
-        given(httpServletRequest.getServerName()).willReturn("uat.services.my-app.xyz");
+        given(httpServletRequest.getServerName()).willReturn("uat.services.greatapp.xyz");
 
         // when
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
 
         // then
-        verify(threadContextService).initializeContext(UAT);
+        verify(threadContextService).initializeContext(Environment.UAT);
     }
 
     @Test
@@ -89,7 +84,7 @@ public class ContextFilterTest
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
 
         // then
-        verify(threadContextService).initializeContext(AUTOMATION_TEST);
+        verify(threadContextService).initializeContext(Environment.AUTOMATION_TEST);
     }
 
     @Test
@@ -102,7 +97,7 @@ public class ContextFilterTest
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
 
         // then
-        verify(threadContextService).initializeContext(DEV);
+        verify(threadContextService).initializeContext(Environment.DEV);
     }
 
     @Test
@@ -115,6 +110,6 @@ public class ContextFilterTest
         contextFilter.doFilter(httpServletRequest, httpServletResponse, filterChain);
 
         // then
-        verify(threadContextService).initializeContext(DEV);
+        verify(threadContextService).initializeContext(Environment.DEV);
     }
 }

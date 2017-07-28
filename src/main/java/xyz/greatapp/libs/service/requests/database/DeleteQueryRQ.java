@@ -1,15 +1,17 @@
-package xyz.my_app.libs.service.requests.database;
+package xyz.greatapp.libs.service.requests.database;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class SelectQuery
+public class DeleteQueryRQ
 {
     private final String table;
     private final ColumnValue[] filters;
 
     @JsonCreator
-    public SelectQuery(@JsonProperty("table") String table, @JsonProperty("filters") ColumnValue[] filters)
+    public DeleteQueryRQ(
+            @JsonProperty("table") String table,
+            @JsonProperty("filters") ColumnValue[] filters)
     {
         this.table = table;
         this.filters = filters;

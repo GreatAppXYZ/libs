@@ -1,4 +1,4 @@
-package xyz.my_app.libs.service.requests.common;
+package xyz.greatapp.libs.service.requests.common;
 
 import java.util.ArrayList;
 import java.util.List;

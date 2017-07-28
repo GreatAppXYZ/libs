@@ -7,8 +7,8 @@ repositories {
     mavenLocal()
 }
 
-version = '0.0.16'
-group = 'xyz.my-app'
+version = '0.0.19'
+group = 'xyz.greatapp'
 archivesBaseName = 'libs'
 
 dependencies {
@@ -55,16 +55,16 @@ uploadArchives {
             }
 
             pom.project {
-                name 'My App XYZ Libs'
+                name 'Great App XYZ Libs'
                 packaging 'jar'
                 // optionally artifactId can be defined here
-                description 'My App XYZ Libs'
-                url 'http://www.my-app.xyz'
+                description 'Great App XYZ Libs'
+                url 'http://www.greatapp.xyz'
 
                 scm {
-                    connection 'https://github.com/MyAppXYZ/libs.git'
-                    developerConnection 'https://github.com/MyAppXYZ/libs.git'
-                    url 'https://github.com/MyAppXYZ/libs.git'
+                    connection 'https://github.com/GreatAppXYZ/libs.git'
+                    developerConnection 'https://github.com/GreatAppXYZ/libs.git'
+                    url 'https://github.com/GreatAppXYZ/libs.git'
                 }
 
                 licenses {

@@ -1,5 +1,5 @@
 
-package xyz.my_app.libs.service;
+package xyz.greatapp.libs.service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

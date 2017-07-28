@@ -1,6 +1,6 @@
-package xyz.my_app.libs.service.context;
+package xyz.greatapp.libs.service.context;
 
-import xyz.my_app.libs.service.Environment;
+import xyz.greatapp.libs.service.Environment;
 
 public interface ThreadContextService {
 

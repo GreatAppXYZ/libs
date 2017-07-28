@@ -1,4 +1,4 @@
-package xyz.my_app.libs.service.requests.database;
+package xyz.greatapp.libs.service.requests.database;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
