@@ -4,19 +4,26 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Join {
     private final String table;
-    private final String column;
+    private final String leftColumn;
+    private final String rightColumn;
 
     public Join(@JsonProperty("table") String table,
-                @JsonProperty("column") String column) {
+                @JsonProperty("leftColumn") String leftColumn,
+                @JsonProperty("rightColumn") String rightColumn) {
         this.table = table;
-        this.column = column;
+        this.leftColumn = leftColumn;
+        this.rightColumn = rightColumn;
     }
 
     public String getTable() {
         return table;
     }
 
-    public String getColumn() {
-        return column;
+    public String getLeftColumn() {
+        return leftColumn;
+    }
+
+    public String getRightColumn() {
+        return rightColumn;
     }
 }

@@ -14,8 +14,8 @@ public class SelectQueryRQ
     @JsonCreator
     public SelectQueryRQ(
             @JsonProperty("table") String table,
-            @JsonProperty("joins") Join[] joins,
-            @JsonProperty("filters") ColumnValue[] filters)
+            @JsonProperty("filters") ColumnValue[] filters,
+            @JsonProperty("joins") Join[] joins)
     {
         this.table = table;
         this.joins = joins;
