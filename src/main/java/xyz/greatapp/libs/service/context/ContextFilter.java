@@ -1,4 +1,4 @@
-package xyz.greatapp.libs.service.filters;
+package xyz.greatapp.libs.service.context;
 
 import static org.springframework.core.Ordered.HIGHEST_PRECEDENCE;
 

@@ -1,4 +1,4 @@
-package xyz.greatapp.libs.service.requests.common;
+package xyz.greatapp.libs.service.database.common;
 
 import java.util.ArrayList;
 import java.util.List;

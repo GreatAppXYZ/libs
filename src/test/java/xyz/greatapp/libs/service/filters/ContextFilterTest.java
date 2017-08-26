@@ -16,6 +16,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import xyz.greatapp.libs.service.Environment;
+import xyz.greatapp.libs.service.context.ContextFilter;
 import xyz.greatapp.libs.service.context.ThreadContextService;
 
 @RunWith(MockitoJUnitRunner.class)

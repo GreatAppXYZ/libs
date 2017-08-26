@@ -1,7 +1,8 @@
-package xyz.greatapp.libs.service.requests.database;
+package xyz.greatapp.libs.service.database.requests;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import xyz.greatapp.libs.service.database.requests.fields.ColumnValue;
 
 public class InsertQueryRQ
 {
