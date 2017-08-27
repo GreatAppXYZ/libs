@@ -22,14 +22,9 @@ public class SelectQueryRQ
         this.filters = filters;
     }
 
-    @JsonCreator
-    public SelectQueryRQ(
-            @JsonProperty("table") String table,
-            @JsonProperty("filters") ColumnValue[] filters)
+    public SelectQueryRQ(String table, ColumnValue[] filters)
     {
-        this.table = table;
-        this.joins = new Join[0];
-        this.filters = filters;
+        this(table, filters, new Join[0]);
     }
 
     public String getTable()

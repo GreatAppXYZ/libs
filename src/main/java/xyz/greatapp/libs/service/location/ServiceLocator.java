@@ -30,7 +30,7 @@ public class ServiceLocator
         if (originalUrl.contains(":"))
         {
             String newUrl = originalUrl.substring(0, originalUrl.indexOf(":"));
-            return newUrl.equals("localhost") ? originalUrl : newUrl;
+            return newUrl.equals("localhost") || newUrl.equals("test.localhost")  ? originalUrl : newUrl;
         }
         return originalUrl;
     }
