@@ -1,4 +1,4 @@
-package xyz.greatapp.libs.service.database.common;
+package xyz.greatapp.libs.service.http;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-public class ApiClientUtils
+@Component
+public class HttpUtil
 {
     public HttpHeaders getHttpHeaders()
     {
